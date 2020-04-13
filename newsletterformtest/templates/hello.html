@@ -1,0 +1,20 @@
+
+<h1>Sign up for PM Weekly Newsletter</h1>
+
+<form method="post">
+{{ form.hidden_tag()}}
+
+{{form.first_name.label}}{{form.first_name}}
+
+<br>
+<br>
+{{form.email_address.label}}{{form.email_address}}
+<br>
+<br>
+{{form.user_type.label}}{{form.user_type}}
+<br>
+<br>
+{{form.submit()}}
+
+
+</form>
