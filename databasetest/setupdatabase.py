@@ -2,17 +2,18 @@ from userinfo import db, Userdetails
 
 ### Creates all the tables. Model --> Database Table###
 
-db.create_all()
 
 kat = Userdetails('Katharina', 'hello@katharinaalf.com')
-fab = Userdetails('Fabby', 'fabbie@gmail.com')
+anne = Userdetails('Anne', 'anneh@gmail.com')
+
+db.create_all()
 
 print(kat.id)
-print(fab.id)
+print(anne.id)
 
-db.session.add_all[(kat, fab)]
+db.session.add_all([kat, anne])
 db.session.commit()
 
 print(kat.id)
-print(fab.id)
+print(anne.id)
 
