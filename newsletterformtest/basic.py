@@ -26,7 +26,7 @@ def index():
 
         return redirect(url_for('thankyou'))
 
-    return render_template('hello.html', form=form)
+    return render_template('hometwo.html', form=form)
 
 
 @app.route('/thankyou')
