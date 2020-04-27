@@ -1,4 +1,4 @@
-from userinfo import db, Userdetails
+from app import db, Userdetails
 
 ### Creates all the tables. Model --> Database Table###
 
