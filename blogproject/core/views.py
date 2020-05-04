@@ -10,3 +10,5 @@ def index():
 @core.route('/info')
 def info():
     return render_template('info.html')
+
+    
