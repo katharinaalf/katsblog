@@ -22,8 +22,9 @@ Migrate(app,db)
 
 login_manager = LoginManager()
 login_manager.init_app(app)
-login_manager.login_view = 'users.login'
+login_manager.login_view = "users.login"
 
+#login = LoginManager(app)
 
 ########
 
@@ -32,9 +33,10 @@ from blogproject.users.views import users
 from blogproject.blog_posts.views import blog_posts
 from blogproject.errorpages.handlers import errorpages
 
-app.register_blueprint(core)
+
 app.register_blueprint(users)
 app.register_blueprint(blog_posts)
+app.register_blueprint(core)
 app.register_blueprint(errorpages)
 
 

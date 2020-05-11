@@ -1,10 +1,10 @@
 from blogproject import db, login_manager
+from datetime import datetime
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
-from datetime import datetime
 
 @login_manager.user_loader
-def load_user(user,id):
+def load_user(user_id):
     return User.query.get(user_id)
 
 
@@ -46,10 +46,10 @@ class BlogPost(db.Model):
         self.title = title
         self.text = text
         self.user_id = user_id
-
+        
 
     def __repr__(self):
-        return f"Post ID: {self.id}"
+        return f"Post Id: {self.id} --- Title: {self.title}"
     
     
 
