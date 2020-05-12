@@ -1,8 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-  <div class="jumbotron">
-    <h1>katharina alf.</h1>
-    <p>a blog about product management x sustainability </p>
+  <div class= "firstsection">
+    <br>
+    <img class= "headimage" src="../static/katlaptop2.JPG" alt="kat holding laptop">
+     <div class = "introtext">
+    <h2>Hey I'm Kat</h2>
+      <h4>This is a blog about product management x sustainability.</h4>
+      <button type="button" class="btn btn-dark" href= "https://medium.com/code-university/the-top-5-things-i-learned-about-product-management-in-2019-2c88c39fa3b">Cool Content</button>
+     </div> 
   </div>
 
   <div class="container">
@@ -17,7 +22,6 @@
 
         <h2><a class="card-title" href="  {{ url_for('blog_posts.blog_post', blog_post_id=post.id) }}">{{ post.title }}</a></h2>
         <a href="{{ url_for('users.user_posts', username=post.author.username) }}">Written By: {{ post.author.username }}</a>
-        <p>Published on: {{ post.date.strftime('%Y-%m-%d') }}</p>
         <p class="card-text">{{ post.text[:100] }}...</p>
         <a href="{{ url_for('blog_posts.blog_post', blog_post_id=post.id) }}" class="btn btn-primary">Read Blog Post</a>
       </div>
