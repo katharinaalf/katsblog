@@ -22,28 +22,28 @@ class RegistrationForm(FlaskForm):
     pass_confirm = PasswordField('Confirm Password', validators=[DataRequired()])
     submit = SubmitField('Register')
 
-    def check_email(self, field):
+    def validate_email(self, field):
         if User.query.filter_by(email=field.data).first():
             raise ValidationError('Your email has been registered already. Use a new one cool human.')
     
 
-    def check_username(self, field):
+    def validate_username(self, field):
         if User.query.filter_by(username=field.data).first():
             raise ValidationError('Your username has been registered already. Please get creative and use a new one.')
     
 
 class UpdateUserForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Email()])
-    password = PasswordField('Password', validators=[DataRequired()])
+    username = StringField('Username', validators=[DataRequired()])
     picture = FileField('Update Profile Picture', validators=[FileAllowed(['jpg', 'png'])])
     submit = SubmitField('Update')
 
-    def check_email(self, field):
+    def validate_email(self, field):
         if User.query.filter_by(email=field.data).first():
             raise ValidationError('Your email has been registered already. Use a new one cool human.')
     
 
-    def check_username(self, field):
+    def validate_username(self, field):
         if User.query.filter_by(username=field.data).first():
             raise ValidationError('Your username has been registered already. Please get creative and use a new one.')
     
