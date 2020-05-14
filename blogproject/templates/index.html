@@ -2,14 +2,13 @@
 {% block content %}
   <div class= "firstsection">
     <br>
-    <img class= "headimage" src="../static/katlaptop2.JPG" alt="kat holding laptop">
+    <img class="headimage" src="../static/coverimageblog.png" alt="kat holding laptop" style="max-width:80%; 
+    height:auto">
      <div class = "introtext">
-    <h2>Hey I'm Kat</h2>
-      <h4>This is a blog about product management x sustainability.</h4>
-      <button type="button" class="btn btn-dark" href= "https://medium.com/code-university/the-top-5-things-i-learned-about-product-management-in-2019-2c88c39fa3b">Cool Content</button>
+       <br>
+        <h4 style="color:#C97D60;">  most recent posts__</h4>
      </div> 
   </div>
-
   <div class="container">
 
     {# Go through each blog post #}
@@ -28,7 +27,7 @@
     </div>
 
    {% endfor %}
-
+<br>
    <nav aria-label="Page navigation example">
      <ul class="pagination justify-content-center">
        {% for page_num in blog_posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
