@@ -189,3 +189,5 @@ Temporary Items
 # Pyre type checker
 
 # End of https://www.gitignore.io/api/macos,flask,python
+
+blogproject/data.sqlite
