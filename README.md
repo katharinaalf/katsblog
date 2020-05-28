@@ -6,6 +6,7 @@
 
 ```sh
 pip3 install -r requirements.txt
+flask db upgrade
 python3 app.py
 open http://127.0.0.1:5000/
 ```
